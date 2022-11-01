@@ -1,0 +1,30 @@
+{% extends './common/base.html' %}
+
+{% load static %}
+{% block content %}
+<main class="page lanidng-page">
+    <br />
+    <h2 style="text-align: center;">Login or Sign Up </h2>
+    <section class="portfolio-block block-intro">
+        <form method="post">
+            {% csrf_token %}
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input type="text" name="name" class="form-control" />
+                <label class="form-label" for="form2Example1">Username</label>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input type="password" name="password" class="form-control" />
+                <label class="form-label" for="form2Example2">Password</label>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
+
+        </form>
+    </section>
+
+</main>
+{% endblock %}

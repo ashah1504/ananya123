@@ -1,0 +1,28 @@
+{% extends './common/base.html'%}
+{% load static %}
+{% load widget_tweaks %}
+{% block content%}
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <h2 style="text-align: center;">Add Project Form</h2>
+        <form action="{% url 'projectAdd' %}" method="post">
+            {% csrf_token %}
+            <!-- Name:<input type="text" name="name" placeholder=""><br />
+            TechStack:<input type="text"><br />
+            Description:<input type="text"><br />
+            Link:<input type="text"><br />  -->
+            <!-- {{form}} -->
+            <label>Name</label>
+            {% render_field form.name %}<br />
+            <label>TechStack</label>
+            {% render_field form.techStack %}<br />
+            <label>Description</label>
+            {% render_field form.description %}<br />
+            <label>Link</label>
+            {% render_field form.link %}<br />
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+{% endblock %}

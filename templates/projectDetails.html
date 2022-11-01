@@ -1,0 +1,27 @@
+{% extends './common/base.html'%}
+{% load static %}
+
+{% block content%}
+<main class="page projects-page">
+    <section class="portfolio-block projects-cards">
+        <div class="container">
+            <div class="heading">
+                <h2>Title: {{fetch_data.name}}</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0"><a href="#"><img class="card-img-top scale-on-hover"
+                                src="{% static '/img/nature/image1.jpg' %}" alt="Card Image"></a>
+                        <div class="card-body">
+                            <h6><a href="#"></a></h6>
+                            <p class="text-muted card-text">Tech Stack: {{fetch_data.techStack}}</p>
+                            <span>Description: {{fetch_data.description}}</span><br />
+                            <span>Link: {{fetch_data.link}} </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
